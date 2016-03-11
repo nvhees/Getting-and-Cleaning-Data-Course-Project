@@ -1,0 +1,2143 @@
+
+Codebook for the data sets "TestTrainMeanStd" and "meandata"
+
+===========================================================
+
+Table of contents:
+
+1.Data ownership and version
+2.Feature Selection data set "TestTrainMeanStd"
+3.Features dataset "meandata"
+4.Complete list of variables "meandata"
+5.Variable summaries "TestTrainMeanStd"
+6.Variable summaries "meandata"
+
+===========================================================
+
+1.Data ownership and version
+
+===========================================================
+
+Human Activity Recognition Using Smartphones Dataset
+Version 1.0
+Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
+Smartlab - Non Linear Complex Systems Laboratory
+DITEN - Universita degli Studi di Genova.
+Via Opera Pia 11A, I-16145, Genoa, Italy.
+activityrecognition@smartlab.ws
+www.smartlab.ws
+
+===========================================================
+
+2.Features data set "TestTrainMeanStd"
+
+===========================================================
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+The set of variables that were estimated from these signals are: 
+
+mean(): Mean value
+std(): Standard deviation
+
+
+
+
+==============================================================
+
+3.Features dataset "meandata"
+
+==============================================================
+
+
+This dataset contains the aggregated data from data set "TestTrainMeanStd" with the average of each variable, for each activity, and each subject.
+
+
+
+==============================================================
+
+4.Complete list of variables "meandata"
+
+==============================================================
+
+"activity""subjectnr""timebodyaccelerometermeanx""timebodyaccelerometermeany""timebodyaccelerometermeanz""timegravityaccelerometermeanx""timegravityaccelerometermeany""timegravityaccelerometermeanz""timebodyaccelerometerjerkmeanx""timebodyaccelerometerjerkmeany""timebodyaccelerometerjerkmeanz""timebodygyroscopemeanx""timebodygyroscopemeany""timebodygyroscopemeanz""timebodygyroscopejerkmeanx""timebodygyroscopejerkmeany""timebodygyroscopejerkmeanz""timebodyaccelerometermagnitudemean""timegravityaccelerometermagnitudemean""timebodyaccelerometerjerkmagnitudemean""timebodygyroscopemagnitudemean""timebodygyroscopejerkmagnitudemean""frequencybodyaccelerometermeanx""frequencybodyaccelerometermeany""frequencybodyaccelerometermeanz""frequencybodyaccelerometerjerkmeanx""frequencybodyaccelerometerjerkmeany""frequencybodyaccelerometerjerkmeanz""frequencybodygyroscopemeanx""frequencybodygyroscopemeany""frequencybodygyroscopemeanz""frequencybodyaccelerometermagnitudemean""frequencybodyaccelerometerjerkmagnitudemean""frequencybodygyroscopemagnitudemean""frequencybodygyroscopejerkmagnitudemean""timebodyaccelerometerstdx""timebodyaccelerometerstdy""timebodyaccelerometerstdz""timegravityaccelerometerstdx""timegravityaccelerometerstdy""timegravityaccelerometerstdz""timebodyaccelerometerjerkstdx""timebodyaccelerometerjerkstdy""timebodyaccelerometerjerkstdz""timebodygyroscopestdx""timebodygyroscopestdy""timebodygyroscopestdz""timebodygyroscopejerkstdx""timebodygyroscopejerkstdy""timebodygyroscopejerkstdz""timebodyaccelerometermagnitudestd""timegravityaccelerometermagnitudestd""timebodyaccelerometerjerkmagnitudestd""timebodygyroscopemagnitudestd""timebodygyroscopejerkmagnitudestd""frequencybodyaccelerometerstdx""frequencybodyaccelerometerstdy""frequencybodyaccelerometerstdz""frequencybodyaccelerometerjerkstdx""frequencybodyaccelerometerjerkstdy""frequencybodyaccelerometerjerkstdz""frequencybodygyroscopestdx""frequencybodygyroscopestdy""frequencybodygyroscopestdz""frequencybodyaccelerometermagnitudestd""frequencybodyaccelerometerjerkmagnitudestd""frequencybodygyroscopemagnitudestd""frequencybodygyroscopejerkmagnitudestd"
+
+
+==============================================================
+
+5.Variable summaries "TestTrainMeanStd"
+
+==============================================================
+
+  ====================================================
+
+   activity
+
+----------------------------------------------------
+
+   Storage mode: character
+
+       Length:      10299
+        Class:  character
+         Mode:  character
+
+====================================================
+
+   subjectnr
+
+----------------------------------------------------
+
+   Storage mode: integer
+
+          Min.:   1.000
+       1st Qu.:   9.000
+        Median:  17.000
+          Mean:  16.150
+       3rd Qu.:  24.000
+          Max.:  30.000
+
+====================================================
+
+   timebodyaccelerometermeanx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:   0.263
+        Median:   0.277
+          Mean:   0.274
+       3rd Qu.:   0.288
+          Max.:   1.000
+
+====================================================
+
+   timebodyaccelerometermeany
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.025
+        Median:  -0.017
+          Mean:  -0.018
+       3rd Qu.:  -0.011
+          Max.:   1.000
+
+====================================================
+
+   timebodyaccelerometermeanz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.121
+        Median:  -0.109
+          Mean:  -0.109
+       3rd Qu.:  -0.098
+          Max.:   1.000
+
+====================================================
+
+   timegravityaccelerometermeanx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:   0.812
+        Median:   0.922
+          Mean:   0.669
+       3rd Qu.:   0.955
+          Max.:   1.000
+
+====================================================
+
+   timegravityaccelerometermeany
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.243
+        Median:  -0.144
+          Mean:   0.004
+       3rd Qu.:   0.119
+          Max.:   1.000
+
+====================================================
+
+   timegravityaccelerometermeanz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.117
+        Median:   0.037
+          Mean:   0.092
+       3rd Qu.:   0.216
+          Max.:   1.000
+
+====================================================
+
+   timebodyaccelerometerjerkmeanx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:   0.063
+        Median:   0.076
+          Mean:   0.079
+       3rd Qu.:   0.091
+          Max.:   1.000
+
+====================================================
+
+   timebodyaccelerometerjerkmeany
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.019
+        Median:   0.011
+          Mean:   0.008
+       3rd Qu.:   0.034
+          Max.:   1.000
+
+====================================================
+
+   timebodyaccelerometerjerkmeanz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.032
+        Median:  -0.001
+          Mean:  -0.005
+       3rd Qu.:   0.025
+          Max.:   1.000
+
+====================================================
+
+   timebodygyroscopemeanx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.046
+        Median:  -0.028
+          Mean:  -0.031
+       3rd Qu.:  -0.011
+          Max.:   1.000
+
+====================================================
+
+   timebodygyroscopemeany
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.104
+        Median:  -0.075
+          Mean:  -0.075
+       3rd Qu.:  -0.051
+          Max.:   1.000
+
+====================================================
+
+   timebodygyroscopemeanz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:   0.065
+        Median:   0.086
+          Mean:   0.088
+       3rd Qu.:   0.110
+          Max.:   1.000
+
+====================================================
+
+   timebodygyroscopejerkmeanx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.117
+        Median:  -0.098
+          Mean:  -0.097
+       3rd Qu.:  -0.079
+          Max.:   1.000
+
+====================================================
+
+   timebodygyroscopejerkmeany
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.059
+        Median:  -0.041
+          Mean:  -0.042
+       3rd Qu.:  -0.025
+          Max.:   1.000
+
+====================================================
+
+   timebodygyroscopejerkmeanz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.079
+        Median:  -0.055
+          Mean:  -0.055
+       3rd Qu.:  -0.032
+          Max.:   1.000
+
+====================================================
+
+   timebodyaccelerometermagnitudemean
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.982
+        Median:  -0.875
+          Mean:  -0.548
+       3rd Qu.:  -0.120
+          Max.:   1.000
+
+====================================================
+
+   timegravityaccelerometermagnitudemean
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.982
+        Median:  -0.875
+          Mean:  -0.548
+       3rd Qu.:  -0.120
+          Max.:   1.000
+
+====================================================
+
+   timebodyaccelerometerjerkmagnitudemean
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.990
+        Median:  -0.948
+          Mean:  -0.649
+       3rd Qu.:  -0.296
+          Max.:   1.000
+
+====================================================
+
+   timebodygyroscopemagnitudemean
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.978
+        Median:  -0.822
+          Mean:  -0.605
+       3rd Qu.:  -0.245
+          Max.:   1.000
+
+====================================================
+
+   timebodygyroscopejerkmagnitudemean
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.992
+        Median:  -0.956
+          Mean:  -0.762
+       3rd Qu.:  -0.550
+          Max.:   1.000
+
+====================================================
+
+   frequencybodyaccelerometermeanx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.991
+        Median:  -0.946
+          Mean:  -0.623
+       3rd Qu.:  -0.265
+          Max.:   1.000
+
+====================================================
+
+   frequencybodyaccelerometermeany
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.979
+        Median:  -0.864
+          Mean:  -0.537
+       3rd Qu.:  -0.103
+          Max.:   1.000
+
+====================================================
+
+   frequencybodyaccelerometermeanz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.983
+        Median:  -0.895
+          Mean:  -0.665
+       3rd Qu.:  -0.366
+          Max.:   1.000
+
+====================================================
+
+   frequencybodyaccelerometerjerkmeanx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.991
+        Median:  -0.952
+          Mean:  -0.657
+       3rd Qu.:  -0.327
+          Max.:   1.000
+
+====================================================
+
+   frequencybodyaccelerometerjerkmeany
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.985
+        Median:  -0.926
+          Mean:  -0.629
+       3rd Qu.:  -0.264
+          Max.:   1.000
+
+====================================================
+
+   frequencybodyaccelerometerjerkmeanz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.987
+        Median:  -0.948
+          Mean:  -0.744
+       3rd Qu.:  -0.513
+          Max.:   1.000
+
+====================================================
+
+   frequencybodygyroscopemeanx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.985
+        Median:  -0.892
+          Mean:  -0.672
+       3rd Qu.:  -0.384
+          Max.:   1.000
+
+====================================================
+
+   frequencybodygyroscopemeany
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.985
+        Median:  -0.920
+          Mean:  -0.706
+       3rd Qu.:  -0.473
+          Max.:   1.000
+
+====================================================
+
+   frequencybodygyroscopemeanz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.985
+        Median:  -0.888
+          Mean:  -0.644
+       3rd Qu.:  -0.323
+          Max.:   1.000
+
+====================================================
+
+   frequencybodyaccelerometermagnitudemean
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.985
+        Median:  -0.875
+          Mean:  -0.586
+       3rd Qu.:  -0.217
+          Max.:   1.000
+
+====================================================
+
+   frequencybodyaccelerometerjerkmagnitudemean
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.990
+        Median:  -0.929
+          Mean:  -0.621
+       3rd Qu.:  -0.260
+          Max.:   1.000
+
+====================================================
+
+   frequencybodygyroscopemagnitudemean
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.983
+        Median:  -0.876
+          Mean:  -0.697
+       3rd Qu.:  -0.451
+          Max.:   1.000
+
+====================================================
+
+   frequencybodygyroscopejerkmagnitudemean
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.992
+        Median:  -0.945
+          Mean:  -0.780
+       3rd Qu.:  -0.612
+          Max.:   1.000
+
+====================================================
+
+   timebodyaccelerometerstdx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.992
+        Median:  -0.943
+          Mean:  -0.608
+       3rd Qu.:  -0.250
+          Max.:   1.000
+
+====================================================
+
+   timebodyaccelerometerstdy
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.977
+        Median:  -0.835
+          Mean:  -0.510
+       3rd Qu.:  -0.057
+          Max.:   1.000
+
+====================================================
+
+   timebodyaccelerometerstdz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.979
+        Median:  -0.851
+          Mean:  -0.613
+       3rd Qu.:  -0.279
+          Max.:   1.000
+
+====================================================
+
+   timegravityaccelerometerstdx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.995
+        Median:  -0.982
+          Mean:  -0.965
+       3rd Qu.:  -0.962
+          Max.:   1.000
+
+====================================================
+
+   timegravityaccelerometerstdy
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.991
+        Median:  -0.976
+          Mean:  -0.954
+       3rd Qu.:  -0.946
+          Max.:   1.000
+
+====================================================
+
+   timegravityaccelerometerstdz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.987
+        Median:  -0.967
+          Mean:  -0.939
+       3rd Qu.:  -0.930
+          Max.:   1.000
+
+====================================================
+
+   timebodyaccelerometerjerkstdx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.991
+        Median:  -0.951
+          Mean:  -0.640
+       3rd Qu.:  -0.291
+          Max.:   1.000
+
+====================================================
+
+   timebodyaccelerometerjerkstdy
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.985
+        Median:  -0.925
+          Mean:  -0.608
+       3rd Qu.:  -0.222
+          Max.:   1.000
+
+====================================================
+
+   timebodyaccelerometerjerkstdz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.989
+        Median:  -0.954
+          Mean:  -0.763
+       3rd Qu.:  -0.548
+          Max.:   1.000
+
+====================================================
+
+   timebodygyroscopestdx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.987
+        Median:  -0.902
+          Mean:  -0.721
+       3rd Qu.:  -0.482
+          Max.:   1.000
+
+====================================================
+
+   timebodygyroscopestdy
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.982
+        Median:  -0.911
+          Mean:  -0.683
+       3rd Qu.:  -0.446
+          Max.:   1.000
+
+====================================================
+
+   timebodygyroscopestdz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.985
+        Median:  -0.882
+          Mean:  -0.654
+       3rd Qu.:  -0.338
+          Max.:   1.000
+
+====================================================
+
+   timebodygyroscopejerkstdx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.991
+        Median:  -0.935
+          Mean:  -0.731
+       3rd Qu.:  -0.486
+          Max.:   1.000
+
+====================================================
+
+   timebodygyroscopejerkstdy
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.992
+        Median:  -0.955
+          Mean:  -0.786
+       3rd Qu.:  -0.627
+          Max.:   1.000
+
+====================================================
+
+   timebodygyroscopejerkstdz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.993
+        Median:  -0.950
+          Mean:  -0.740
+       3rd Qu.:  -0.510
+          Max.:   1.000
+
+====================================================
+
+   timebodyaccelerometermagnitudestd
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.982
+        Median:  -0.844
+          Mean:  -0.591
+       3rd Qu.:  -0.242
+          Max.:   1.000
+
+====================================================
+
+   timegravityaccelerometermagnitudestd
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.982
+        Median:  -0.844
+          Mean:  -0.591
+       3rd Qu.:  -0.242
+          Max.:   1.000
+
+====================================================
+
+   timebodyaccelerometerjerkmagnitudestd
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.991
+        Median:  -0.929
+          Mean:  -0.628
+       3rd Qu.:  -0.273
+          Max.:   1.000
+
+====================================================
+
+   timebodygyroscopemagnitudestd
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.978
+        Median:  -0.826
+          Mean:  -0.662
+       3rd Qu.:  -0.394
+          Max.:   1.000
+
+====================================================
+
+   timebodygyroscopejerkmagnitudestd
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.992
+        Median:  -0.940
+          Mean:  -0.778
+       3rd Qu.:  -0.609
+          Max.:   1.000
+
+====================================================
+
+   frequencybodyaccelerometerstdx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.993
+        Median:  -0.942
+          Mean:  -0.603
+       3rd Qu.:  -0.249
+          Max.:   1.000
+
+====================================================
+
+   frequencybodyaccelerometerstdy
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.977
+        Median:  -0.833
+          Mean:  -0.528
+       3rd Qu.:  -0.092
+          Max.:   1.000
+
+====================================================
+
+   frequencybodyaccelerometerstdz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.978
+        Median:  -0.840
+          Mean:  -0.618
+       3rd Qu.:  -0.302
+          Max.:   1.000
+
+====================================================
+
+   frequencybodyaccelerometerjerkstdx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.992
+        Median:  -0.956
+          Mean:  -0.655
+       3rd Qu.:  -0.320
+          Max.:   1.000
+
+====================================================
+
+   frequencybodyaccelerometerjerkstdy
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.987
+        Median:  -0.928
+          Mean:  -0.612
+       3rd Qu.:  -0.236
+          Max.:   1.000
+
+====================================================
+
+   frequencybodyaccelerometerjerkstdz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.990
+        Median:  -0.959
+          Mean:  -0.781
+       3rd Qu.:  -0.590
+          Max.:   1.000
+
+====================================================
+
+   frequencybodygyroscopestdx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.988
+        Median:  -0.905
+          Mean:  -0.739
+       3rd Qu.:  -0.522
+          Max.:   1.000
+
+====================================================
+
+   frequencybodygyroscopestdy
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.981
+        Median:  -0.906
+          Mean:  -0.674
+       3rd Qu.:  -0.439
+          Max.:   1.000
+
+====================================================
+
+   frequencybodygyroscopestdz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.986
+        Median:  -0.891
+          Mean:  -0.690
+       3rd Qu.:  -0.417
+          Max.:   1.000
+
+====================================================
+
+   frequencybodyaccelerometermagnitudestd
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.983
+        Median:  -0.855
+          Mean:  -0.659
+       3rd Qu.:  -0.382
+          Max.:   1.000
+
+====================================================
+
+   frequencybodyaccelerometerjerkmagnitudestd
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.991
+        Median:  -0.925
+          Mean:  -0.640
+       3rd Qu.:  -0.308
+          Max.:   1.000
+
+====================================================
+
+   frequencybodygyroscopemagnitudestd
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.978
+        Median:  -0.828
+          Mean:  -0.700
+       3rd Qu.:  -0.471
+          Max.:   1.000
+
+====================================================
+
+   frequencybodygyroscopejerkmagnitudestd
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -1.000
+       1st Qu.:  -0.993
+        Median:  -0.938
+          Mean:  -0.792
+       3rd Qu.:  -0.644
+          Max.:   1.000
+
+
+
+===========================================================
+
+6.Variable summaries "meandata"
+
+===========================================================
+
+====================================================
+
+   subjectnr
+
+----------------------------------------------------
+
+   Storage mode: integer
+
+          Min.:   1.000
+       1st Qu.:   8.000
+        Median:  15.500
+          Mean:  15.500
+       3rd Qu.:  23.000
+          Max.:  30.000
+
+====================================================
+
+   activity
+
+----------------------------------------------------
+
+   Storage mode: character
+
+       Length:        180
+        Class:  character
+         Mode:  character
+
+====================================================
+
+   timebodyaccelerometermeanx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  0.222
+       1st Qu.:  0.271
+        Median:  0.277
+          Mean:  0.274
+       3rd Qu.:  0.280
+          Max.:  0.301
+
+====================================================
+
+   timebodyaccelerometermeany
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.041
+       1st Qu.:  -0.020
+        Median:  -0.017
+          Mean:  -0.018
+       3rd Qu.:  -0.015
+          Max.:  -0.001
+
+====================================================
+
+   timebodyaccelerometermeanz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.152
+       1st Qu.:  -0.112
+        Median:  -0.108
+          Mean:  -0.109
+       3rd Qu.:  -0.104
+          Max.:  -0.075
+
+====================================================
+
+   timegravityaccelerometermeanx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.680
+       1st Qu.:   0.838
+        Median:   0.921
+          Mean:   0.698
+       3rd Qu.:   0.943
+          Max.:   0.975
+
+====================================================
+
+   timegravityaccelerometermeany
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.480
+       1st Qu.:  -0.233
+        Median:  -0.128
+          Mean:  -0.016
+       3rd Qu.:   0.088
+          Max.:   0.957
+
+====================================================
+
+   timegravityaccelerometermeanz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.495
+       1st Qu.:  -0.117
+        Median:   0.024
+          Mean:   0.074
+       3rd Qu.:   0.149
+          Max.:   0.958
+
+====================================================
+
+   timebodyaccelerometerjerkmeanx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  0.043
+       1st Qu.:  0.074
+        Median:  0.076
+          Mean:  0.079
+       3rd Qu.:  0.083
+          Max.:  0.130
+
+====================================================
+
+   timebodyaccelerometerjerkmeany
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.039
+       1st Qu.:   0.000
+        Median:   0.009
+          Mean:   0.008
+       3rd Qu.:   0.013
+          Max.:   0.057
+
+====================================================
+
+   timebodyaccelerometerjerkmeanz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.067
+       1st Qu.:  -0.011
+        Median:  -0.004
+          Mean:  -0.005
+       3rd Qu.:   0.002
+          Max.:   0.038
+
+====================================================
+
+   timebodygyroscopemeanx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.206
+       1st Qu.:  -0.047
+        Median:  -0.029
+          Mean:  -0.032
+       3rd Qu.:  -0.017
+          Max.:   0.193
+
+====================================================
+
+   timebodygyroscopemeany
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.204
+       1st Qu.:  -0.090
+        Median:  -0.073
+          Mean:  -0.074
+       3rd Qu.:  -0.061
+          Max.:   0.027
+
+====================================================
+
+   timebodygyroscopemeanz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.072
+       1st Qu.:   0.075
+        Median:   0.085
+          Mean:   0.087
+       3rd Qu.:   0.102
+          Max.:   0.179
+
+====================================================
+
+   timebodygyroscopejerkmeanx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.157
+       1st Qu.:  -0.103
+        Median:  -0.099
+          Mean:  -0.096
+       3rd Qu.:  -0.091
+          Max.:  -0.022
+
+====================================================
+
+   timebodygyroscopejerkmeany
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.077
+       1st Qu.:  -0.046
+        Median:  -0.041
+          Mean:  -0.043
+       3rd Qu.:  -0.038
+          Max.:  -0.013
+
+====================================================
+
+   timebodygyroscopejerkmeanz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.092
+       1st Qu.:  -0.062
+        Median:  -0.053
+          Mean:  -0.055
+       3rd Qu.:  -0.049
+          Max.:  -0.007
+
+====================================================
+
+   timebodyaccelerometermagnitudemean
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.987
+       1st Qu.:  -0.957
+        Median:  -0.483
+          Mean:  -0.497
+       3rd Qu.:  -0.092
+          Max.:   0.645
+
+====================================================
+
+   timegravityaccelerometermagnitudemean
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.987
+       1st Qu.:  -0.957
+        Median:  -0.483
+          Mean:  -0.497
+       3rd Qu.:  -0.092
+          Max.:   0.645
+
+====================================================
+
+   timebodyaccelerometerjerkmagnitudemean
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.993
+       1st Qu.:  -0.981
+        Median:  -0.817
+          Mean:  -0.608
+       3rd Qu.:  -0.246
+          Max.:   0.434
+
+====================================================
+
+   timebodygyroscopemagnitudemean
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.981
+       1st Qu.:  -0.946
+        Median:  -0.655
+          Mean:  -0.565
+       3rd Qu.:  -0.216
+          Max.:   0.418
+
+====================================================
+
+   timebodygyroscopejerkmagnitudemean
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.997
+       1st Qu.:  -0.985
+        Median:  -0.865
+          Mean:  -0.736
+       3rd Qu.:  -0.512
+          Max.:   0.088
+
+====================================================
+
+   frequencybodyaccelerometermeanx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.995
+       1st Qu.:  -0.979
+        Median:  -0.769
+          Mean:  -0.576
+       3rd Qu.:  -0.217
+          Max.:   0.537
+
+====================================================
+
+   frequencybodyaccelerometermeany
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.989
+       1st Qu.:  -0.954
+        Median:  -0.595
+          Mean:  -0.489
+       3rd Qu.:  -0.063
+          Max.:   0.524
+
+====================================================
+
+   frequencybodyaccelerometermeanz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.990
+       1st Qu.:  -0.962
+        Median:  -0.724
+          Mean:  -0.630
+       3rd Qu.:  -0.318
+          Max.:   0.281
+
+====================================================
+
+   frequencybodyaccelerometerjerkmeanx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.995
+       1st Qu.:  -0.983
+        Median:  -0.813
+          Mean:  -0.614
+       3rd Qu.:  -0.282
+          Max.:   0.474
+
+====================================================
+
+   frequencybodyaccelerometerjerkmeany
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.989
+       1st Qu.:  -0.973
+        Median:  -0.782
+          Mean:  -0.588
+       3rd Qu.:  -0.196
+          Max.:   0.277
+
+====================================================
+
+   frequencybodyaccelerometerjerkmeanz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.992
+       1st Qu.:  -0.980
+        Median:  -0.871
+          Mean:  -0.714
+       3rd Qu.:  -0.470
+          Max.:   0.158
+
+====================================================
+
+   frequencybodygyroscopemeanx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.993
+       1st Qu.:  -0.970
+        Median:  -0.730
+          Mean:  -0.637
+       3rd Qu.:  -0.339
+          Max.:   0.475
+
+====================================================
+
+   frequencybodygyroscopemeany
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.994
+       1st Qu.:  -0.970
+        Median:  -0.814
+          Mean:  -0.677
+       3rd Qu.:  -0.446
+          Max.:   0.329
+
+====================================================
+
+   frequencybodygyroscopemeanz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.986
+       1st Qu.:  -0.962
+        Median:  -0.791
+          Mean:  -0.604
+       3rd Qu.:  -0.264
+          Max.:   0.492
+
+====================================================
+
+   frequencybodyaccelerometermagnitudemean
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.987
+       1st Qu.:  -0.956
+        Median:  -0.670
+          Mean:  -0.536
+       3rd Qu.:  -0.162
+          Max.:   0.587
+
+====================================================
+
+   frequencybodyaccelerometerjerkmagnitudemean
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.994
+       1st Qu.:  -0.977
+        Median:  -0.794
+          Mean:  -0.576
+       3rd Qu.:  -0.187
+          Max.:   0.538
+
+====================================================
+
+   frequencybodygyroscopemagnitudemean
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.987
+       1st Qu.:  -0.962
+        Median:  -0.766
+          Mean:  -0.667
+       3rd Qu.:  -0.409
+          Max.:   0.204
+
+====================================================
+
+   frequencybodygyroscopejerkmagnitudemean
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.998
+       1st Qu.:  -0.981
+        Median:  -0.878
+          Mean:  -0.756
+       3rd Qu.:  -0.583
+          Max.:   0.147
+
+====================================================
+
+   timebodyaccelerometerstdx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.996
+       1st Qu.:  -0.980
+        Median:  -0.753
+          Mean:  -0.558
+       3rd Qu.:  -0.198
+          Max.:   0.627
+
+====================================================
+
+   timebodyaccelerometerstdy
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.990
+       1st Qu.:  -0.942
+        Median:  -0.509
+          Mean:  -0.461
+       3rd Qu.:  -0.031
+          Max.:   0.617
+
+====================================================
+
+   timebodyaccelerometerstdz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.988
+       1st Qu.:  -0.950
+        Median:  -0.652
+          Mean:  -0.576
+       3rd Qu.:  -0.231
+          Max.:   0.609
+
+====================================================
+
+   timegravityaccelerometerstdx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.997
+       1st Qu.:  -0.983
+        Median:  -0.970
+          Mean:  -0.964
+       3rd Qu.:  -0.951
+          Max.:  -0.830
+
+====================================================
+
+   timegravityaccelerometerstdy
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.994
+       1st Qu.:  -0.971
+        Median:  -0.959
+          Mean:  -0.952
+       3rd Qu.:  -0.937
+          Max.:  -0.644
+
+====================================================
+
+   timegravityaccelerometerstdz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.991
+       1st Qu.:  -0.961
+        Median:  -0.945
+          Mean:  -0.936
+       3rd Qu.:  -0.918
+          Max.:  -0.610
+
+====================================================
+
+   timebodyaccelerometerjerkstdx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.995
+       1st Qu.:  -0.983
+        Median:  -0.810
+          Mean:  -0.595
+       3rd Qu.:  -0.223
+          Max.:   0.544
+
+====================================================
+
+   timebodyaccelerometerjerkstdy
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.990
+       1st Qu.:  -0.972
+        Median:  -0.776
+          Mean:  -0.565
+       3rd Qu.:  -0.148
+          Max.:   0.355
+
+====================================================
+
+   timebodyaccelerometerjerkstdz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.993
+       1st Qu.:  -0.983
+        Median:  -0.884
+          Mean:  -0.736
+       3rd Qu.:  -0.512
+          Max.:   0.031
+
+====================================================
+
+   timebodygyroscopestdx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.994
+       1st Qu.:  -0.974
+        Median:  -0.789
+          Mean:  -0.692
+       3rd Qu.:  -0.441
+          Max.:   0.268
+
+====================================================
+
+   timebodygyroscopestdy
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.994
+       1st Qu.:  -0.963
+        Median:  -0.802
+          Mean:  -0.653
+       3rd Qu.:  -0.420
+          Max.:   0.476
+
+====================================================
+
+   timebodygyroscopestdz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.986
+       1st Qu.:  -0.961
+        Median:  -0.801
+          Mean:  -0.616
+       3rd Qu.:  -0.311
+          Max.:   0.565
+
+====================================================
+
+   timebodygyroscopejerkstdx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.997
+       1st Qu.:  -0.980
+        Median:  -0.840
+          Mean:  -0.704
+       3rd Qu.:  -0.463
+          Max.:   0.179
+
+====================================================
+
+   timebodygyroscopejerkstdy
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.997
+       1st Qu.:  -0.983
+        Median:  -0.894
+          Mean:  -0.764
+       3rd Qu.:  -0.586
+          Max.:   0.296
+
+====================================================
+
+   timebodygyroscopejerkstdz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.995
+       1st Qu.:  -0.985
+        Median:  -0.861
+          Mean:  -0.710
+       3rd Qu.:  -0.474
+          Max.:   0.193
+
+====================================================
+
+   timebodyaccelerometermagnitudestd
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.987
+       1st Qu.:  -0.943
+        Median:  -0.607
+          Mean:  -0.544
+       3rd Qu.:  -0.209
+          Max.:   0.428
+
+====================================================
+
+   timegravityaccelerometermagnitudestd
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.987
+       1st Qu.:  -0.943
+        Median:  -0.607
+          Mean:  -0.544
+       3rd Qu.:  -0.209
+          Max.:   0.428
+
+====================================================
+
+   timebodyaccelerometerjerkmagnitudestd
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.995
+       1st Qu.:  -0.977
+        Median:  -0.801
+          Mean:  -0.584
+       3rd Qu.:  -0.217
+          Max.:   0.451
+
+====================================================
+
+   timebodygyroscopemagnitudestd
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.981
+       1st Qu.:  -0.948
+        Median:  -0.742
+          Mean:  -0.630
+       3rd Qu.:  -0.360
+          Max.:   0.300
+
+====================================================
+
+   timebodygyroscopejerkmagnitudestd
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.998
+       1st Qu.:  -0.981
+        Median:  -0.881
+          Mean:  -0.755
+       3rd Qu.:  -0.577
+          Max.:   0.250
+
+====================================================
+
+   frequencybodyaccelerometerstdx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.997
+       1st Qu.:  -0.982
+        Median:  -0.747
+          Mean:  -0.552
+       3rd Qu.:  -0.197
+          Max.:   0.658
+
+====================================================
+
+   frequencybodyaccelerometerstdy
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.991
+       1st Qu.:  -0.940
+        Median:  -0.513
+          Mean:  -0.481
+       3rd Qu.:  -0.079
+          Max.:   0.560
+
+====================================================
+
+   frequencybodyaccelerometerstdz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.987
+       1st Qu.:  -0.946
+        Median:  -0.644
+          Mean:  -0.582
+       3rd Qu.:  -0.266
+          Max.:   0.687
+
+====================================================
+
+   frequencybodyaccelerometerjerkstdx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.995
+       1st Qu.:  -0.985
+        Median:  -0.825
+          Mean:  -0.612
+       3rd Qu.:  -0.247
+          Max.:   0.477
+
+====================================================
+
+   frequencybodyaccelerometerjerkstdy
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.991
+       1st Qu.:  -0.974
+        Median:  -0.785
+          Mean:  -0.571
+       3rd Qu.:  -0.169
+          Max.:   0.350
+
+====================================================
+
+   frequencybodyaccelerometerjerkstdz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.993
+       1st Qu.:  -0.984
+        Median:  -0.895
+          Mean:  -0.756
+       3rd Qu.:  -0.544
+          Max.:  -0.006
+
+====================================================
+
+   frequencybodygyroscopestdx
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.995
+       1st Qu.:  -0.975
+        Median:  -0.809
+          Mean:  -0.711
+       3rd Qu.:  -0.481
+          Max.:   0.197
+
+====================================================
+
+   frequencybodygyroscopestdy
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.994
+       1st Qu.:  -0.960
+        Median:  -0.796
+          Mean:  -0.645
+       3rd Qu.:  -0.415
+          Max.:   0.646
+
+====================================================
+
+   frequencybodygyroscopestdz
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.987
+       1st Qu.:  -0.964
+        Median:  -0.822
+          Mean:  -0.658
+       3rd Qu.:  -0.392
+          Max.:   0.522
+
+====================================================
+
+   frequencybodyaccelerometermagnitudestd
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.988
+       1st Qu.:  -0.945
+        Median:  -0.651
+          Mean:  -0.621
+       3rd Qu.:  -0.365
+          Max.:   0.179
+
+====================================================
+
+   frequencybodyaccelerometerjerkmagnitudestd
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.994
+       1st Qu.:  -0.975
+        Median:  -0.813
+          Mean:  -0.599
+       3rd Qu.:  -0.267
+          Max.:   0.316
+
+====================================================
+
+   frequencybodygyroscopemagnitudestd
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.982
+       1st Qu.:  -0.949
+        Median:  -0.773
+          Mean:  -0.672
+       3rd Qu.:  -0.428
+          Max.:   0.237
+
+====================================================
+
+   frequencybodygyroscopejerkmagnitudestd
+
+----------------------------------------------------
+
+   Storage mode: double
+
+          Min.:  -0.998
+       1st Qu.:  -0.980
+        Median:  -0.894
+          Mean:  -0.771
+       3rd Qu.:  -0.608
+          Max.:   0.288
+
+
+==============================================================
+
+ 
+

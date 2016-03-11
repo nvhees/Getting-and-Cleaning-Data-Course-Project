@@ -1,0 +1,118 @@
+
+```{r }
+#Assignment: Getting and Cleaning Data Course Project
+
+#Check if packages are installed. If not; install packages. Initialize libraries.
+packages <- c("utils", "data.table", "plyr", "dplyr", "memisc")
+if (length(setdiff(packages, rownames(installed.packages()))) > 0) {
+    install.packages(setdiff(packages, rownames(installed.packages())))  
+}
+
+#Download the .zip file if it is not already present.
+
+fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+if (!file.exists("./UCI_HAR_Dataset.zip")) {download.file(fileUrl, destfile = "./UCI_HAR_Dataset.zip") 
+}
+# If you are working on OSX and the previous line gave an error or did not download the file than 
+# run this line: download.file(fileUrl, destfile = "./UCI_HAR_Dataset.zip", method = "curl")
+
+
+#Print the download date and check if the file is present.
+DateDownloaded <- date()
+print(DateDownloaded)
+list.files()
+
+
+#Unzip the files.
+library("utils")
+unzip("UCI_HAR_Dataset.zip")
+
+
+#Reading in the train and test datasets, the files with labels and the activity and subject variables.
+#The files are large, wait for R to finish.
+library(data.table)
+TrainDataset <- data.table(read.table("./UCI HAR Dataset/train/X_train.txt"))
+TestDataset <- data.table(read.table("./UCI HAR Dataset/test/X_test.txt"))
+activity_labels <- data.table(read.table("./UCI HAR Dataset/activity_labels.txt"))
+features <- data.table(read.table("./UCI HAR Dataset/features.txt"))
+TrainActLabels <- data.table(read.table("./UCI HAR Dataset/train/Y_train.txt"))
+TestActLabels <- data.table(read.table("./UCI HAR Dataset/test/Y_test.txt"))
+subjectNrtrain <- data.table(read.table("./UCI HAR Dataset/train/subject_train.txt"))
+subjectNrtest <- data.table(read.table("./UCI HAR Dataset/test/subject_test.txt"))
+
+ 
+#Add column namens.
+colnames(TrainDataset) <- as.character(features$V2)
+colnames(TestDataset) <- as.character(features$V2)
+
+
+#Create variables with rownumbers to make sorting mistakes less likely.
+TrainDataset$RowNumber <- as.numeric(rownames(TrainDataset))
+TestDataset$RowNumber <- as.numeric(rownames(TestDataset))
+
+
+#Create Variables to retain test condition information.
+TrainDataset$Condition <- "Train"
+TestDataset$Condition <- "Test"
+
+
+#Add activity number and testsubject number variables to Test and Train dataset using mutate.
+library(dplyr)
+TestTotal <- mutate(TestDataset, Activity = TestActLabels$V1,SubjectNr = subjectNrtest$V1)
+TrainTotal <- mutate(TrainDataset, Activity = TrainActLabels$V1,SubjectNr = subjectNrtrain$V1)
+
+
+#Append Test to Train dataset.
+#This is the answer to assignement 1.
+TestTrain <- rbind(TestTotal,TrainTotal)
+#If you want to check the dataset by eye run: write.csv(TestTrain, file = "TestTrain.csv")  
+
+#Select only the variables that contain mean and standard deviation.
+#This is the answer to assignment 2. 
+#I have assumed here that the assigment is meant to select all variables that report the mean and not variables containing the mean frequency or the calculation of angle using a means variable.
+TestTrainMeanStd <- select(TestTrain, Activity, SubjectNr, contains("-mean()"), contains("-std()")) 
+
+
+#Rename the numberic activity labels with descriptive activity labels.
+#This is the answer to assignment 3.
+library(plyr)
+TestTrainMeanStd$Activity <- mapvalues(TestTrainMeanStd$Activity, 
+                                       from = c("1", "2", "3", "4", "5", "6"), 
+                                       to = c("WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", "LAYING"))
+
+#Rename column names to approptiate variable names; no non-alfanumeric characters, all lowercase, no abbreviations.
+#This answers assignment 4.
+names(TestTrainMeanStd) <- gsub("\\(", "", names(TestTrainMeanStd))
+names(TestTrainMeanStd) <- gsub("\\)", "", names(TestTrainMeanStd))
+names(TestTrainMeanStd) <- gsub("\\-", "", names(TestTrainMeanStd))
+names(TestTrainMeanStd) <- gsub("^t", "time", names(TestTrainMeanStd))
+names(TestTrainMeanStd) <- gsub("^f", "frequency", names(TestTrainMeanStd))
+names(TestTrainMeanStd) <- gsub("Acc", "Accelerometer", names(TestTrainMeanStd))
+names(TestTrainMeanStd) <- gsub("Gyro", "Gyroscope", names(TestTrainMeanStd))
+names(TestTrainMeanStd) <- gsub("Mag", "Magnitude", names(TestTrainMeanStd))
+names(TestTrainMeanStd) <- gsub("BodyBody", "Body", names(TestTrainMeanStd))
+names(TestTrainMeanStd) <- tolower(names(TestTrainMeanStd))
+
+
+#From the data set in step 4, creates a second, independent tidy data set 
+# with the average of each variable for each activity and each subject.
+
+meandata<-aggregate(. ~subjectnr + activity, TestTrainMeanStd, mean)
+meandata<-meandata[order(meandata$subject,meandata$activity),]
+
+write.table(meandata, file = "tidydataset.txt",row.name=FALSE)
+
+#Produce a codebook.
+library(memisc)
+Write(codebook(TestTrainMeanStd),
+      file="codebook_TestTrainMeanStd.txt")
+Write(codebook(meandata),
+      file="codebook_meandata.txt")
+```
+
+
+---
+title: "run_analysis.R"
+author: "nvhees"
+date: "Fri Mar 11 11:23:08 2016"
+---
