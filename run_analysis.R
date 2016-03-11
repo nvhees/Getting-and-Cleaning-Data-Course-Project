@@ -1,6 +1,6 @@
 # Author: Nathalie van Hees, 11 March 2016.
 
-packages <- c("utils", "data.table", "plyr", "dplyr", "memisc")
+packages <- c("utils", "data.table", "plyr", "dplyr")
 if (length(setdiff(packages, rownames(installed.packages()))) > 0) {
     install.packages(setdiff(packages, rownames(installed.packages())))  
 }
@@ -64,8 +64,3 @@ meandata<-meandata[order(meandata$subject,meandata$activity),]
 
 write.table(meandata, file = "tidydataset.txt",row.name=FALSE)
 
-library(memisc)
-Write(codebook(TestTrainMeanStd),
-      file="codebook_TestTrainMeanStd.txt")
-Write(codebook(meandata),
-      file="codebook_meandata.txt")
