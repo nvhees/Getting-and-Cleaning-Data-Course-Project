@@ -1,4 +1,4 @@
-# Author: Nathalie van Hees, 11 March 2016.
+# Author: Nathalie van Hees, Leiden University, 11 March 2016.
 
 packages <- c("utils", "data.table", "plyr", "dplyr")
 if (length(setdiff(packages, rownames(installed.packages()))) > 0) {
