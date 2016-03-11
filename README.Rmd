@@ -104,7 +104,7 @@ meandata<-meandata[order(meandata$subject,meandata$activity),]
 
 write.table(meandata, file = "tidydataset.txt",row.name=FALSE)
 
-#Produce a codebook.
+# This is the code I used to produce a codebook with file summaries.
 library(memisc)
 Write(codebook(TestTrainMeanStd),
       file="codebook_TestTrainMeanStd.txt")
@@ -114,7 +114,7 @@ Write(codebook(meandata),
 
 
 ---
-title: "run_analysis.R"
+title: "README.R"
 author: "nvhees"
 date: "Fri Mar 11 11:23:08 2016"
 ---
