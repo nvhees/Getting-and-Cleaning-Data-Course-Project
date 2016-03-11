@@ -2,6 +2,8 @@
 ```{r }
 #Assignment: Getting and Cleaning Data Course Project
 
+#This files walks through the analyses as performed in the run_analysis.R script.
+
 #Check if packages are installed. If not; install packages. Initialize libraries.
 packages <- c("utils", "data.table", "plyr", "dplyr", "memisc")
 if (length(setdiff(packages, rownames(installed.packages()))) > 0) {
